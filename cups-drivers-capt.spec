@@ -3,7 +3,7 @@
 Summary:	CAPT driver for Canon LBP-810 and LBP-1120
 Name:		cups-drivers-%{rname}
 Version:	0.1
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL
 Group:		System/Printing
 URL:		http://www.boichat.ch/nicolas/capt/
