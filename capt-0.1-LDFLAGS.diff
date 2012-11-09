@@ -1,0 +1,18 @@
+--- Makefile	2004-08-17 15:21:48.000000000 +0200
++++ Makefile.oden	2008-12-23 20:36:55.000000000 +0100
+@@ -4,13 +4,14 @@
+ 
+ CC=gcc
+ CFLAGS=-O2 -g
++LDFLAGS=
+ 
+ RELEASE=0.1
+ 
+ all: capt
+ 
+ capt: capt.c capt.h Makefile
+-	${CC} ${INCLUDE} ${CFLAGS} capt.c -o capt
++	${CC} ${INCLUDE} ${CFLAGS} ${LDFLAGS} capt.c -o capt
+ 
+ install: all
+ 	install -s -m a=rx capt /usr/bin
