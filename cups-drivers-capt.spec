@@ -21,10 +21,10 @@ This package contains CUPS drivers (PPD) for the following printers:
 
 %prep
 %setup -qn %{rname}-%{version}
-%patch0 -p0
+%autopatch0 -p0
 
 %build
-%make CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
+%make_build CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
 
 # Correct PPD files to pass "cupstestppd"
 sed -i -e "s/DefaultNoReset/DefaultAlwaysReset/g" ppd/*.ppd
