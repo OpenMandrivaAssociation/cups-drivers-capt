@@ -21,7 +21,7 @@ This package contains CUPS drivers (PPD) for the following printers:
 
 %prep
 %setup -qn %{rname}-%{version}
-%autopatch0 -p0
+%autopatch -p0
 
 %build
 %make_build CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
