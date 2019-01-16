@@ -9,6 +9,7 @@ Group:		System/Printing
 Url:		http://www.boichat.ch/nicolas/capt/
 Source0:	http://www.boichat.ch/nicolas/capt/%{rname}-%{version}.tar.gz
 Patch0:		capt-0.1-LDFLAGS.diff
+Patch1:		capt-0.1-gcc7.patch
 Requires:	cups
 
 %description
@@ -21,7 +22,7 @@ This package contains CUPS drivers (PPD) for the following printers:
 
 %prep
 %setup -qn %{rname}-%{version}
-%autopatch -p0
+%autopatch -p1
 
 %build
 %make_build CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
