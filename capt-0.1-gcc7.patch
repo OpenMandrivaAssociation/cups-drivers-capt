@@ -1,0 +1,20 @@
+--- capt-0.1/capt.c.gcc7	2004-08-16 20:22:57.000000000 +0200
++++ capt-0.1/capt.c	2017-09-28 11:47:14.082208179 +0200
+@@ -49,7 +49,7 @@
+ 
+ //char gname[20];
+ 
+-void INLINE errorexit();
++void errorexit();
+ 
+ unsigned char cmdbuffer[8][256];
+ 
+@@ -486,7 +486,7 @@
+ 	return 1;
+ }
+ 
+-void INLINE errorexit() {
++void errorexit() {
+ #ifdef DEBUG
+    int* i = 0;
+    (*i)++;
