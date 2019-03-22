@@ -3,13 +3,14 @@
 Summary:	CAPT driver for Canon LBP-810 and LBP-1120
 Name:		cups-drivers-%{rname}
 Version:	0.1
-Release:	23
+Release:	24
 License:	GPLv2
 Group:		System/Printing
 Url:		http://www.boichat.ch/nicolas/capt/
 Source0:	http://www.boichat.ch/nicolas/capt/%{rname}-%{version}.tar.gz
 Patch0:		capt-0.1-LDFLAGS.diff
 Patch1:		capt-0.1-gcc7.patch
+Patch2:		capt-0.1-compile.patch
 Requires:	cups
 
 %description
@@ -21,8 +22,7 @@ This package contains CUPS drivers (PPD) for the following printers:
  o Canon-LBP-1120
 
 %prep
-%setup -qn %{rname}-%{version}
-%autopatch -p1
+%autosetup -p1 -n %{rname}-%{version}
 
 %build
 %make_build CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"

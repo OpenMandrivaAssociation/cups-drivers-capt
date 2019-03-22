@@ -1,0 +1,33 @@
+diff -up capt-0.1/lbp810-test.c.omv~ capt-0.1/lbp810-test.c
+--- capt-0.1/lbp810-test.c.omv~	2019-03-22 01:19:26.496309498 +0100
++++ capt-0.1/lbp810-test.c	2019-03-22 01:19:36.074221917 +0100
+@@ -74,7 +74,7 @@ void write_command_packet_buf(unsigned c
+ 	}
+ }
+ 
+-inline void write_command_packet(unsigned char one, unsigned char two, int uwait, int nread) {
++static void write_command_packet(unsigned char one, unsigned char two, int uwait, int nread) {
+ 	write_command_packet_buf(one, two, uwait, nread, NULL, 0);
+ }
+ 
+diff -up capt-0.1/capt.c.omv~ capt-0.1/capt.c
+--- capt-0.1/capt.c.omv~	2019-03-22 01:21:47.940563447 +0100
++++ capt-0.1/capt.c	2019-03-22 01:21:56.868286038 +0100
+@@ -497,7 +497,7 @@ void errorexit() {
+    exit(1);
+ }
+ 
+-void INLINE ssleep(const int usec) {
++static void ssleep(const int usec) {
+    gettimeofday(&lasttv, NULL);
+    while (1) {
+       gettimeofday(&newtv, NULL);
+@@ -557,7 +557,7 @@ void write_command_packet_buf(unsigned c
+ 	}
+ }
+ 
+-INLINE void write_command_packet(unsigned char one, unsigned char two, int uwait, int nread) {
++static void write_command_packet(unsigned char one, unsigned char two, int uwait, int nread) {
+ 	write_command_packet_buf(one, two, uwait, nread, NULL, 0);
+ }
+ 
