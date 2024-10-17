@@ -6,7 +6,7 @@ Version:	0.1
 Release:	25
 License:	GPLv2
 Group:		System/Printing
-Url:		http://www.boichat.ch/nicolas/capt/
+Url:		https://www.boichat.ch/nicolas/capt/
 Source0:	http://www.boichat.ch/nicolas/capt/%{rname}-%{version}.tar.gz
 Patch0:		capt-0.1-LDFLAGS.diff
 Patch1:		capt-0.1-gcc7.patch
