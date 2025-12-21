@@ -13,6 +13,7 @@ Patch1:		capt-0.1-gcc7.patch
 Patch2:		capt-0.1-compile.patch
 Requires:	cups
 
+BuildRequires:	make
 %description
 CAPT driver for Canon LBP-810 and LBP-1120
 
